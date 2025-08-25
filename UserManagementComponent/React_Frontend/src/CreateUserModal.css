@@ -1,0 +1,209 @@
+/* CreateUserModal.css */
+.create-user-modal {
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-input, .form-textarea, .form-select {
+  padding: 12px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-select {
+  cursor: pointer;
+  background-color: white;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.radio-label:hover {
+  color: #007bff;
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom {
+  border-color: #007bff;
+  background-color: #007bff;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.radio-label:hover .radio-custom {
+  border-color: #007bff;
+}
+
+.error-message {
+  background-color: #ffeaa7;
+  color: #d63031;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #d63031;
+  margin-bottom: 15px;
+  font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hide any auto-generated warning icons */
+.error-message::before {
+  display: none !important;
+}
+
+.success-message {
+  background-color: #d1f2eb;
+  color: #00b894;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #00b894;
+  margin-bottom: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Required field indicator */
+.form-group label::after {
+  content: '';
+}
+
+/* Add red asterisk for all required input fields */
+.form-group label[for] {
+  position: relative;
+}
+
+.form-group input[required] + label::after,
+.form-group textarea[required] + label::after,
+.form-group select[required] + label::after,
+label[for="userName"]::after,
+label[for="email"]::after,
+label[for="password"]::after,
+label[for="confirmPassword"]::after,
+label[for="address"]::after,
+label[for="role"]::after {
+  content: ' *';
+  color: #d63031;
+  font-weight: bold;
+}
+
+/* Password validation styles */
+.password-requirements {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 5px;
+}
+
+.requirements-title {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #856404;
+}
+
+.requirements-list {
+  margin: 0;
+  padding-left: 16px;
+  list-style: none;
+}
+
+.requirement-error {
+  font-size: 11px;
+  color: #721c24;
+  margin-bottom: 4px;
+}
+
+.password-valid {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  color: #155724;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .create-user-modal {
+    max-width: 95vw;
+    margin: 10px;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

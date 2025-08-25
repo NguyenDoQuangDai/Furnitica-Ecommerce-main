@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+AngularProject/client/node_modules/
+DotNetWebAPI/.vs/
+DotNetWebAPI/DotNetWebAPI/obj/
+DotNetWebAPI/DotNetWebAPI/bin/
+DotNetWebAPI/DotNetWebAPI/DotNetWebAPI.csproj
+DotNetWebAPI/DotNetWebAPI/DotNetWebAPI.csproj.user
+*.cache
+*.dll
+*.exe
+*.pdb
+*.editorconfig
+*.suo
+*.user
