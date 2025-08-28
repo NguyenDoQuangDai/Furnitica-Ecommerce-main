@@ -1,0 +1,19 @@
+/* Essential CSS Bundle - Only include what's actually used */
+
+/* Bootstrap essentials only */
+@import '../libs/bootstrap/css/bootstrap.min.css';
+
+/* Font Awesome - only icons actually used */
+@import '../libs/font-awesome/css/font-awesome.min.css';
+
+/* Material Design Icons for Angular Material */
+@import '../libs/font-material/css/material-design-iconic-font.min.css';
+
+/* Sliders - only if actually used */
+@import '../libs/owl-carousel/assets/owl.carousel.min.css';
+@import '../libs/slick-slider/css/slick.css';
+@import '../libs/slick-slider/css/slick-theme.css';
+
+/* Main custom styles */
+@import './style.css';
+@import './reponsive.css';

@@ -147,7 +147,7 @@ export default function UsersList() {
     <div className="users-list-container">
       {/* Logo Header */}
       <div className="logo-header">
-        <a href="http://localhost:4200/" className="logo-link">
+        <a href={import.meta.env.VITE_ANGULAR_APP_URL || "http://localhost:4200/"} className="logo-link">
           <img src={logo} alt="Furnitica Logo" className="logo-image" />
         </a>
       </div>

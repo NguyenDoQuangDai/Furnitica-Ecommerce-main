@@ -7,6 +7,7 @@ public class UserListDTO {
     private String username;
     private String email;
     private String roleName;
+    private Integer gender;
     
     // Private constructor to enforce factory method usage
     private UserListDTO() {}
@@ -18,6 +19,7 @@ public class UserListDTO {
         dto.username = user.getUsername();
         dto.email = user.getEmail();
         dto.roleName = user.getRoleName();
+        dto.gender = user.getGender();
         return dto;
     }
     
@@ -38,6 +40,10 @@ public class UserListDTO {
         return roleName;
     }
     
+    public Integer getGender() {
+        return gender;
+    }
+    
     @Override
     public String toString() {
         return "UserListDTO{" +
@@ -45,6 +51,7 @@ public class UserListDTO {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", roleName='" + roleName + '\'' +
+                ", gender=" + gender +
                 '}';
     }
 }

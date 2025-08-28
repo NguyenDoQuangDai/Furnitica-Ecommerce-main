@@ -1,0 +1,32 @@
+# Azure DevOps Pipeline for React Frontend
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'production'
+  workingDirectory: 'UserManagementComponent/React_Frontend'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    cd $(workingDirectory)
+    npm install
+  displayName: 'Install dependencies'
+
+- script: |
+    cd $(workingDirectory)
+    npm run build
+  displayName: 'Build React app'
+
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: '$(workingDirectory)'
+    output_location: 'dist'
+  displayName: 'Deploy to Azure Static Web Apps'
