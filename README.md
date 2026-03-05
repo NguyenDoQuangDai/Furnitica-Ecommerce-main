@@ -1,5 +1,24 @@
 # Furnitica Web Application
 
+# 🧩 User Management Component Integration
+
+## 📌 Giới thiệu
+`UserManagementComponent` là phần tích hợp giữa **React Frontend** và microservice **[userManagement-ms](https://github.com/NguyenDoQuangDai/userManagement-ms)** trong hệ thống **Furnitica-Ecommerce**.  
+Thành phần này cung cấp giao diện trực quan cho người dùng để thực hiện các chức năng quản lý tài khoản, đồng thời kết nối trực tiếp với microservice để xử lý dữ liệu và xác thực.
+
+## ⚙️ Chức năng chính
+- **Đăng ký / Đăng nhập** thông qua giao diện React, kết nối API từ `userManagement-ms`.  
+- **Quản lý thông tin cá nhân**: cập nhật hồ sơ, mật khẩu, email.  
+- **Phân quyền & vai trò**: hiển thị và kiểm soát quyền truy cập dựa trên dữ liệu từ microservice.  
+- **Danh sách người dùng**: hiển thị bảng dữ liệu người dùng, hỗ trợ CRUD.  
+
+## 🏗️ Kiến trúc tích hợp
+- **Frontend**: ReactJS, sử dụng Axios/Fetch để gọi API.  
+- **Backend**: `userManagement-ms` (Java Spring Boot, Spring Security JWT, MySQL).  
+- **Kết nối**: REST API endpoints từ microservice được sử dụng trong `UserManagementComponent`.  
+- **Triển khai**: có thể chạy độc lập cùng các microservice
+  
+
 ## 🧐 About
 * Furniture Online Store Built Using Angular 13 and .NET Core 6 Web API
 
